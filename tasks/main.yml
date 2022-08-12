@@ -10,3 +10,24 @@
   become: yes
   when: ansible_distribution == 'Archlinux'
 
+# Install for Debian
+- name: Install VirtualBox
+  ansible.builtin.package:
+    name: "virtualbox-{{ virtualbox_version }}"
+    state: present
+  become: yes
+  when: ansible_distribution == 'Ubuntu'
+
+- name: Install VirtualBox Kernel Modules
+  ansible.builtin.package:
+    name: "virtualbox-dkms-{{ virtualbox_version }}"
+    state: present
+  become: yes
+  when: ansible_distribution == 'Ubuntu'
+
+- name: Install VirtualBox Extention Pack
+  ansible.builtin.package:
+    name: "virtualbox-ext-pack-{{ virtualbox_version }}"
+    state: present
+  become: yes
+  when: ansible_distribution == 'Ubuntu'
