@@ -1,0 +1,16 @@
+galaxy_info:
+  author: Jordan Murray
+  description: Installs virtualbox
+
+  license: MIT
+
+  min_ansible_version: 2.1
+
+  platforms:
+  - name: Arch
+    versions:
+    - all
+
+  galaxy_tags: []
+
+dependencies: []

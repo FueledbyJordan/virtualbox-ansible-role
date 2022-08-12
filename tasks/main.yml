@@ -1,0 +1,11 @@
+---
+# tasks file for virtualbox-ansible-role
+
+# Install for arch
+- name: Install VirtualBox
+  ansible.builtin.package:
+    name: "virtualbox-{{ virtualbox_version }}"
+    state: present
+  become: yes
+  when: ansible_distribution == 'Archlinux'
+
