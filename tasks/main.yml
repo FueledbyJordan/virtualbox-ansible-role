@@ -4,7 +4,7 @@
 # Install for arch
 - name: Install VirtualBox
   ansible.builtin.package:
-    name: "virtualbox-{{ virtualbox_version }}"
+    name: virtualbox
     state: present
     extra_args: --noconfirm
   become: yes
