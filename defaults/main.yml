@@ -2,3 +2,5 @@
 # defaults file for virtualbox-ansible-role
 
 virtualbox_version: 6.1.34
+virtualbox_deb_version: 6.1.34-dfsg-3~ubuntu1.22.04.1
+virtualbox_deb_ext_version: 6.1.34-1~ubuntu1.22.04.1
