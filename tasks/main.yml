@@ -13,21 +13,21 @@
 # Install for Debian
 - name: Install VirtualBox
   ansible.builtin.package:
-    name: "virtualbox-{{ virtualbox_version }}"
+    name: "virtualbox={{ virtualbox_deb_version }}"
     state: present
   become: yes
   when: ansible_distribution == 'Ubuntu'
 
 - name: Install VirtualBox Kernel Modules
   ansible.builtin.package:
-    name: "virtualbox-dkms-{{ virtualbox_version }}"
+    name: "virtualbox-dkms={{ virtualbox_deb_version }}"
     state: present
   become: yes
   when: ansible_distribution == 'Ubuntu'
 
 - name: Install VirtualBox Extention Pack
   ansible.builtin.package:
-    name: "virtualbox-ext-pack-{{ virtualbox_version }}"
+    name: "virtualbox-ext-pack={{ virtualbox_deb_ext_version }}"
     state: present
   become: yes
   when: ansible_distribution == 'Ubuntu'
